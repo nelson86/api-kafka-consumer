@@ -1,0 +1,14 @@
+server:
+  port: 8081
+  error:
+    include-message: always
+
+app:
+  name: kafka_consumer
+  description: ${app.name} is a Spring Boot application
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: ${app.name}
